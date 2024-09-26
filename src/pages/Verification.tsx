@@ -19,7 +19,7 @@ const Verification: React.FC = () => {
       return;
     }
     try {
-      const response = await fetch('https://nowadays.glitch.me/bot/site', {
+      const response = await fetch('https://nowadays-server.glitch.me/bot/site', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
