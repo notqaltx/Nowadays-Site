@@ -1,27 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const redirectUrl = 'https://discord.com/oauth2/authorize?client_id=1041354129479565342&permissions=8&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A2222%2F&scope=identify+bot+applications.commands+dm_channels.messages.read+dm_channels.messages.write';
 function Home() {
-  const handleStartClick = () => {
-     if (redirectUrl) {
-       window.location.replace(redirectUrl);
-     } else {
-       alert("Error: OAuth2 URL not found. Please check your environment variables.");
-       console.error("OAuth2 URL is undefined in .env file.");
-     }
-  };
+  const navigate = useNavigate();
+  const handleClick = () => { navigate('/verification'); };
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-tr from-[#1E447D] from-0% via-[#3A3369] via-50% to-[#4F2074] text-[#EEE6E6] p-20">
-      <h1 className="text-5xl font-semibold font-['Fira_Code'] mb-2 bottom-[37.5rem] absolute">LetsBeSocial</h1>
-      <p className="text-2xl font-light font-['Fira_Code'] bottom-[35.75rem] absolute">Discord Bot</p>
-      <p className="text-[0.75em] font-light font-['Fira_Code'] opacity-20 bottom-[34rem] absolute">Developed by Alex & Trey</p>
-      <button 
-        onClick={handleStartClick}
-        className="text-xl font-['Fira_Code'] bg-transparent border-2 border-[#EEE6E6] rounded-2xl px-20 py-3 mt-40 top-[35rem] absolute hover:border-4 transition-all duration-300 ease-out"
-      >
-        Start
-      </button>
+    <div className="min-h-screen bg-gradient-to-r from-blue-600 to-blue-900 flex items-center justify-center font-sans p-4">
+      <h1 className="text-5xl text-white font-bold font-['Montserrat'] mb-2 bottom-[31.5rem] absolute">Nowadays</h1>
+      <p className="text-[1.15em] text-white font-medium font-['Montserrat'] bottom-[30rem] absolute">Studio that makes Future!</p>
+      <p className="text-[0.75em] text-white font-medium font-['Montserrat'] opacity-50 bottom-[28.5rem] absolute">Developed by notqaltx & FlayDev</p>
+      <a
+          onClick={handleClick} target="_blank" rel="noopener noreferrer"
+          className="absolute items-center justify-center space-x-2 bottom-[21rem] text-white font-normal font-['Montserrat'] bg-green-600 hover:bg-green-700 transition-colors py-3 px-9 rounded-lg mb-8 shadow-lg"
+        >
+          <span>Start Account Verification</span>
+      </a>
+      <a
+          href="https://discord.gg/Y7GhqThPRb" target="_blank" rel="noopener noreferrer"
+          className="absolute items-center justify-center space-x-2 bottom-[17rem] text-white font-normal font-['Montserrat'] bg-discordIdle hover:bg-discordHover transition-colors py-3 px-9 rounded-lg mb-8 shadow-lg"
+        >
+          <span>Our Discord Server</span>
+      </a>
     </div>
   );
 }

@@ -62,7 +62,7 @@ const Verification: React.FC = () => {
           href="https://www.roblox.com/games/start?launchData=%7B%22From%22%3A%22Verify%22%7D&placeId=18288789431"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center space-x-2 text-white bg-green-600 hover:bg-green-700 transition-colors py-3 px-4 rounded-lg mb-8 shadow-lg"
+          className="flex items-center justify-center space-x-2 text-white font-normal font-['Montserrat'] bg-green-600 hover:bg-green-700 transition-colors py-3 px-4 rounded-lg mb-8 shadow-lg"
         >
           <span>Join Roblox Game</span>
         </a>
@@ -131,7 +131,7 @@ const Verification: React.FC = () => {
           </div>
           <button
             type="submit"
-            className={`w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg ${
+            className={`w-full bg-blue-600 text-white py-3 px-4 font-normal font-['Montserrat'] rounded-lg hover:bg-blue-700 transition-colors shadow-lg ${
               loading ? 'opacity-50 cursor-not-allowed' : ''
             }`}
             disabled={loading}
